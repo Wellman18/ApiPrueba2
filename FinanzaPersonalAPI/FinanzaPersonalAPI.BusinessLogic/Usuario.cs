@@ -18,5 +18,12 @@ namespace FinanzaPersonalAPI.BusinessLogic
         {
             iusuario.InsertarUsuario(usuario);
         }
+
+        public IEnumerable<Model.Usuario> ListarUsuario()
+        {
+            var response=iusuario.ListarUsuario();
+
+            return response;
+        }
     }
 }

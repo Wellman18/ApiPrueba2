@@ -3,8 +3,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FinanzaPersonalAPI.DataAccess
 {
-
-
     public class Usuario : IUsuario
     {
         private readonly ConnectionManagerDbContext _context;
@@ -19,6 +17,15 @@ namespace FinanzaPersonalAPI.DataAccess
             _context.Database
                 .ExecuteSqlInterpolated($"EXEC usp_Usuario_Insertar {usuario.Nombre}, {usuario.Correo}");
             //iusuario.InsertarUsuario(usuario);
+        }
+
+        public IEnumerable<Model.Usuario> ListarUsuario()
+        {
+            var listaUsuarios =  _context.Usuarios
+                                .FromSqlInterpolated($"usp_Usuario_Listar")
+                                .ToList();
+
+            return listaUsuarios;
         }
     }
 }

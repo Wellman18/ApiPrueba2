@@ -10,5 +10,7 @@ namespace FinanzaPersonalAPI.BusinessLogic.Interface
     public interface IUsuario
     {
         void InsertarUsuario(Usuario usuario);
+
+        IEnumerable<Usuario> ListarUsuario();
     }
 }

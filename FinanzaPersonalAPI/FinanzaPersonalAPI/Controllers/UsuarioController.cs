@@ -10,6 +10,7 @@ namespace FinanzaPersonalAPI.Controllers
     public class UsuarioController : ControllerBase
     {
         IUsuario iusuario;
+        IEnumerable<Model.Usuario> listaUsuarios = Enumerable.Empty<Model.Usuario>();
 
         public UsuarioController(IUsuario _usuario)
         {
@@ -45,10 +46,25 @@ namespace FinanzaPersonalAPI.Controllers
             }
         }
 
-        //[HttpGet]
-        //[Route("ObtenerUsuario")]
+        [HttpGet]
+        [Route("ObtenerUsuario")]
 
-        //public async Datos([FromBody] Model.Usuario usuario)
+        public async Task<IEnumerable<Model.Usuario>> ObtenerUsuario()
+        {
+            try
+            {
+                listaUsuarios= iusuario.ListarUsuario();
+
+                return listaUsuarios;
+            }
+            catch (Exception ex)
+            {
+                return listaUsuarios;
+            }
+
+        }
+
+        //public async Task<ActionResult<IEnumerable<Model.Usuario>> ObtenerUsuario([FromBody] Model.Usuario usuario)
         //{
         //    try
         //    {
