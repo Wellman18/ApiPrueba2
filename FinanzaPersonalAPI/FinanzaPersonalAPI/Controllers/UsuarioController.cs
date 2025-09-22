@@ -19,30 +19,61 @@ namespace FinanzaPersonalAPI.Controllers
         [HttpPost]
         [Route("CrearUsuario")]
 
-        public dynamic Datos([FromBody] Model.Usuario usuario)
+        public async Task<ActionResult> CrearUsuario([FromBody] Model.Usuario usuario)
         {
             try
             {
-                var datosSerializados = JsonSerializer.Serialize(usuario);
+                //var datosSerializados = JsonSerializer.Serialize(usuario);
 
-                var datosModelo = JsonSerializer.Deserialize<Model.Usuario>(datosSerializados);
+                //var datosModelo = JsonSerializer.Deserialize<Model.Usuario>(datosSerializados);
 
-                iusuario.InsertarUsuario(datosModelo);
+                iusuario.InsertarUsuario(usuario);
 
-                return new
+                return Ok( new
                 {
                     success = true,
                     estado = StatusCode(200)
-                };
+                });
             }
             catch (Exception ex)
             {
-                return new
+                return BadRequest(new
                 {
                     success = false,
                     estado = ex.Message.ToString()
-                };
+                });
             }
         }
+
+        //[HttpGet]
+        //[Route("ObtenerUsuario")]
+
+        //public async Datos([FromBody] Model.Usuario usuario)
+        //{
+        //    try
+        //    {
+        //        var datosSerializados = JsonSerializer.Serialize(usuario);
+
+        //        var datosModelo = JsonSerializer.Deserialize<Model.Usuario>(datosSerializados);
+
+        //        iusuario.InsertarUsuario(datosModelo);
+
+        //        return new
+        //        {
+        //            success = true,
+        //            estado = StatusCode(200)
+        //        };
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return new
+        //        {
+        //            success = false,
+        //            estado = ex.Message.ToString()
+        //        };
+        //    }
+        //}
+
+
     }
 }
