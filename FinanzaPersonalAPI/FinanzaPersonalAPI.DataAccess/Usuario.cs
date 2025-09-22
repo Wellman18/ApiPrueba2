@@ -17,7 +17,7 @@ namespace FinanzaPersonalAPI.DataAccess
         public void InsertarUsuario(Model.Usuario usuario)
         {
             _context.Database
-                .ExecuteSqlInterpolated($"EXEC sp_Usuario_Insertar {usuario.Nombre}, {usuario.Correo}");
+                .ExecuteSqlInterpolated($"EXEC usp_Usuario_Insertar {usuario.Nombre}, {usuario.Correo}");
             //iusuario.InsertarUsuario(usuario);
         }
     }
