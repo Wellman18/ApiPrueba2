@@ -107,6 +107,29 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "FinanzaPersonalAPI.BusinessLogic.Interface/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "FinanzaPersonalAPI.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FinanzaPersonalAPI.BusinessLogic.Interface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FinanzaPersonalAPI.BusinessLogic.Interface.dll": {}
+        }
+      },
+      "FinanzaPersonalAPI.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/FinanzaPersonalAPI.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FinanzaPersonalAPI.Model.dll": {}
+        }
       }
     }
   },
@@ -451,10 +474,22 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "FinanzaPersonalAPI.BusinessLogic.Interface/1.0.0": {
+      "type": "project",
+      "path": "../FinanzaPersonalAPI.BusinessLogic.Interface/FinanzaPersonalAPI.BusinessLogic.Interface.csproj",
+      "msbuildProject": "../FinanzaPersonalAPI.BusinessLogic.Interface/FinanzaPersonalAPI.BusinessLogic.Interface.csproj"
+    },
+    "FinanzaPersonalAPI.Model/1.0.0": {
+      "type": "project",
+      "path": "../FinanzaPersonalAPI.Model/FinanzaPersonalAPI.Model.csproj",
+      "msbuildProject": "../FinanzaPersonalAPI.Model/FinanzaPersonalAPI.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "FinanzaPersonalAPI.BusinessLogic.Interface >= 1.0.0",
+      "FinanzaPersonalAPI.Model >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.2",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -490,7 +525,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.BusinessLogic.Interface\\FinanzaPersonalAPI.BusinessLogic.Interface.csproj": {
+              "projectPath": "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.BusinessLogic.Interface\\FinanzaPersonalAPI.BusinessLogic.Interface.csproj"
+            },
+            "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.Model\\FinanzaPersonalAPI.Model.csproj": {
+              "projectPath": "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.Model\\FinanzaPersonalAPI.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

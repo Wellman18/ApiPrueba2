@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanzaPersonalAPI", "FinanzaPersonalAPI\FinanzaPersonalAPI.csproj", "{6C02A4D3-9678-438B-AC81-CDF6D3194239}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanzaPersonalAPI.BusinessLogic.Interface", "FinanzaPersonalAPI.BusinessLogic.Interface\FinanzaPersonalAPI.BusinessLogic.Interface.csproj", "{68B92189-1B12-454F-B91F-02D7C2367884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanzaPersonalAPI.Model", "FinanzaPersonalAPI.Model\FinanzaPersonalAPI.Model.csproj", "{7020E662-E084-4D88-A3B2-6405389539AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{6C02A4D3-9678-438B-AC81-CDF6D3194239}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C02A4D3-9678-438B-AC81-CDF6D3194239}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C02A4D3-9678-438B-AC81-CDF6D3194239}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68B92189-1B12-454F-B91F-02D7C2367884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B92189-1B12-454F-B91F-02D7C2367884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B92189-1B12-454F-B91F-02D7C2367884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B92189-1B12-454F-B91F-02D7C2367884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7020E662-E084-4D88-A3B2-6405389539AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7020E662-E084-4D88-A3B2-6405389539AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7020E662-E084-4D88-A3B2-6405389539AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7020E662-E084-4D88-A3B2-6405389539AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
