@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinanzaPersonalAPI.BusinessLogic.Interface\FinanzaPersonalAPI.BusinessLogic.Interface.csproj" />
+    <ProjectReference Include="..\FinanzaPersonalAPI.DataAccess.Interface\FinanzaPersonalAPI.DataAccess.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

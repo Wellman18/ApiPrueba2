@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanzaPersonalAPI.Business
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanzaPersonalAPI.Model", "FinanzaPersonalAPI.Model\FinanzaPersonalAPI.Model.csproj", "{7020E662-E084-4D88-A3B2-6405389539AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanzaPersonalAPI.BusinessLogic", "FinanzaPersonalAPI.BusinessLogic\FinanzaPersonalAPI.BusinessLogic.csproj", "{8148B646-A227-4305-9677-6401452044EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanzaPersonalAPI.DataAccess.Interface", "FinanzaPersonalAPI.DataAccess.Interface\FinanzaPersonalAPI.DataAccess.Interface.csproj", "{023049F6-5AD5-4E61-A761-CDE3BFC29915}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{7020E662-E084-4D88-A3B2-6405389539AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7020E662-E084-4D88-A3B2-6405389539AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7020E662-E084-4D88-A3B2-6405389539AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8148B646-A227-4305-9677-6401452044EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8148B646-A227-4305-9677-6401452044EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8148B646-A227-4305-9677-6401452044EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8148B646-A227-4305-9677-6401452044EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{023049F6-5AD5-4E61-A761-CDE3BFC29915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{023049F6-5AD5-4E61-A761-CDE3BFC29915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{023049F6-5AD5-4E61-A761-CDE3BFC29915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{023049F6-5AD5-4E61-A761-CDE3BFC29915}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

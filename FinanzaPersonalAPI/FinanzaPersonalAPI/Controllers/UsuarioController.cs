@@ -43,10 +43,6 @@ namespace FinanzaPersonalAPI.Controllers
                     estado = ex.Message.ToString()
                 };
             }
-
-
-
-
         }
     }
 }
