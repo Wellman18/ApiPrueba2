@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\FinanzaPersonalAPI.BusinessLogic.Interface\FinanzaPersonalAPI.BusinessLogic.Interface.csproj" />
     <ProjectReference Include="..\FinanzaPersonalAPI.BusinessLogic\FinanzaPersonalAPI.BusinessLogic.csproj" />
+    <ProjectReference Include="..\FinanzaPersonalAPI.DataAccess.Interface\FinanzaPersonalAPI.DataAccess.Interface.csproj" />
     <ProjectReference Include="..\FinanzaPersonalAPI.DataAccess\FinanzaPersonalAPI.DataAccess.csproj" />
     <ProjectReference Include="..\FinanzaPersonalAPI.Model\FinanzaPersonalAPI.Model.csproj" />
   </ItemGroup>

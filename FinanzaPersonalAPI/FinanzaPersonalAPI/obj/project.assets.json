@@ -1139,7 +1139,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "FinanzaPersonalAPI.Model": "1.0.0"
+          "FinanzaPersonalAPI.Model": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.20"
         },
         "compile": {
           "bin/placeholder/FinanzaPersonalAPI.DataAccess.Interface.dll": {}
@@ -3237,6 +3238,7 @@
       "FinanzaPersonalAPI.BusinessLogic >= 1.0.0",
       "FinanzaPersonalAPI.BusinessLogic.Interface >= 1.0.0",
       "FinanzaPersonalAPI.DataAccess >= 1.0.0",
+      "FinanzaPersonalAPI.DataAccess.Interface >= 1.0.0",
       "FinanzaPersonalAPI.Model >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.2",
       "Microsoft.EntityFrameworkCore >= 7.0.20",
@@ -3280,6 +3282,9 @@
             },
             "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.BusinessLogic\\FinanzaPersonalAPI.BusinessLogic.csproj": {
               "projectPath": "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.BusinessLogic\\FinanzaPersonalAPI.BusinessLogic.csproj"
+            },
+            "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.DataAccess.Interface\\FinanzaPersonalAPI.DataAccess.Interface.csproj": {
+              "projectPath": "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.DataAccess.Interface\\FinanzaPersonalAPI.DataAccess.Interface.csproj"
             },
             "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.DataAccess\\FinanzaPersonalAPI.DataAccess.csproj": {
               "projectPath": "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.DataAccess\\FinanzaPersonalAPI.DataAccess.csproj"

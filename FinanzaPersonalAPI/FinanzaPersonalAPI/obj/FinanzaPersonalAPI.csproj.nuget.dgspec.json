@@ -176,6 +176,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.20, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -364,6 +370,9 @@
               },
               "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.BusinessLogic\\FinanzaPersonalAPI.BusinessLogic.csproj": {
                 "projectPath": "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.BusinessLogic\\FinanzaPersonalAPI.BusinessLogic.csproj"
+              },
+              "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.DataAccess.Interface\\FinanzaPersonalAPI.DataAccess.Interface.csproj": {
+                "projectPath": "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.DataAccess.Interface\\FinanzaPersonalAPI.DataAccess.Interface.csproj"
               },
               "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.DataAccess\\FinanzaPersonalAPI.DataAccess.csproj": {
                 "projectPath": "C:\\RepoApi\\ApiPrueba2\\FinanzaPersonalAPI\\FinanzaPersonalAPI.DataAccess\\FinanzaPersonalAPI.DataAccess.csproj"

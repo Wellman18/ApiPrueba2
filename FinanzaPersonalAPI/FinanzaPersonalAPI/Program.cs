@@ -1,4 +1,5 @@
 using FinanzaPersonalAPI.DataAccess;
+using FinanzaPersonalAPI.DataAccess.Interface;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,8 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddScoped<FinanzaPersonalAPI.BusinessLogic.Interface.IUsuario, FinanzaPersonalAPI.BusinessLogic.Usuario>();
-builder.Services.AddScoped<IConneci, ConnectionManager>();
-builder.Services.AddScoped<GuardarDatosBD.DataAccess.Interface.IInsercionDatosBD, GuardarDatosBD.DataAccess.InsercionDatosBD>();
+builder.Services.AddScoped<IConnectionManagerDbContext, ConnectionManagerDbContext>();
+builder.Services.AddScoped<FinanzaPersonalAPI.DataAccess.Interface.IUsuario, FinanzaPersonalAPI.DataAccess.Usuario>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
