@@ -11,6 +11,8 @@ namespace FinanzaPersonalAPI.DataAccess.Interface
     {
         void InsertarUsuario(Usuario usuario);
 
+        void ModificarUsuario(Usuario usuario);
+
         IEnumerable<Usuario> ListarUsuario();
     }
 }

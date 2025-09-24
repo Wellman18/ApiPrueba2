@@ -19,6 +19,13 @@ namespace FinanzaPersonalAPI.DataAccess
             //iusuario.InsertarUsuario(usuario);
         }
 
+        public void ModificarUsuario(Model.Usuario usuario)
+        {
+            _context.Database
+                .ExecuteSqlInterpolated($"EXEC usp_Usuario_Modificar {usuario.Id}, {usuario.Nombre}, {usuario.Correo}");
+            //iusuario.InsertarUsuario(usuario);
+        }
+
         public IEnumerable<Model.Usuario> ListarUsuario()
         {
             var listaUsuarios =  _context.Usuarios
