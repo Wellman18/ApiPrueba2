@@ -13,6 +13,8 @@ namespace FinanzaPersonalAPI.DataAccess.Interface
 
         void ModificarUsuario(Usuario usuario);
 
+        void EliminarUsuario(Usuario usuario);
+
         IEnumerable<Usuario> ListarUsuario();
     }
 }

@@ -76,6 +76,38 @@ namespace FinanzaPersonalAPI.Controllers
         }
 
 
+        [HttpPost]
+        [Route("EliminarUsuario")]
+
+        public async Task<ActionResult> EliminarUsuario([FromBody] Model.Usuario usuario)
+        {
+            try
+            {
+                //var datosSerializados = JsonSerializer.Serialize(usuario);
+
+                //var datosModelo = JsonSerializer.Deserialize<Model.Usuario>(datosSerializados);
+
+                iusuario.EliminarUsuario(usuario);
+
+                return Ok(new
+                {
+                    success = true,
+                    estado = StatusCode(200)
+                });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new
+                {
+                    success = false,
+                    estado = ex.Message.ToString()
+                });
+            }
+        }
+
+
+
+
         [HttpGet]
         [Route("ObtenerUsuario")]
 
