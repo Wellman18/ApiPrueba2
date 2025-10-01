@@ -15,7 +15,7 @@ namespace FinanzaPersonalAPI.DataAccess
         public void InsertarUsuario(Model.Usuario usuario)
         {
             _context.Database
-                .ExecuteSqlInterpolated($"EXEC usp_Usuario_Insertar {usuario.Nombre}, {usuario.Correo}, {usuario.IdTipoIdentificacion}");
+                .ExecuteSqlInterpolated($"EXEC usp_Usuario_Insertar {usuario.Nombre}, {usuario.Correo}");
             //iusuario.InsertarUsuario(usuario);
         }
 
@@ -33,10 +33,10 @@ namespace FinanzaPersonalAPI.DataAccess
             //iusuario.InsertarUsuario(usuario);
         }
 
-        public IEnumerable<Model.Usuario> ListarUsuario()
+        public IEnumerable<Model.Usuario> ListarUsuario(string? usuario)
         {
             var listaUsuarios =  _context.Usuarios
-                                .FromSqlInterpolated($"usp_Usuario_Listar")
+                                .FromSqlInterpolated($"usp_Usuario_Listar {usuario}")
                                 .ToList();
 
             return listaUsuarios;

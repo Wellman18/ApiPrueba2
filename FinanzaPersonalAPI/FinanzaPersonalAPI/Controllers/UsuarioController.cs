@@ -111,11 +111,13 @@ namespace FinanzaPersonalAPI.Controllers
         [HttpGet]
         [Route("ObtenerUsuario")]
 
-        public async Task<IEnumerable<Model.Usuario>> ObtenerUsuario()
+        public async Task<IEnumerable<Model.Usuario>> ObtenerUsuario(string? usuario)
         {
             try
             {
-                listaUsuarios= iusuario.ListarUsuario();
+                usuario = usuario?.Trim();
+
+                listaUsuarios= iusuario.ListarUsuario(usuario);
 
                 return listaUsuarios;
             }
