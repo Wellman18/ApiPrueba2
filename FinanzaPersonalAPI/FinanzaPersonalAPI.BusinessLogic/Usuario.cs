@@ -29,9 +29,9 @@ namespace FinanzaPersonalAPI.BusinessLogic
             iusuario.EliminarUsuario(usuario);
         }
 
-        public IEnumerable<Model.Usuario> ListarUsuario(string? usuario)
+        public IEnumerable<Model.Usuario> ListarUsuario()
         {
-            var response=iusuario.ListarUsuario(usuario);
+            var response=iusuario.ListarUsuario();
 
             return response;
         }

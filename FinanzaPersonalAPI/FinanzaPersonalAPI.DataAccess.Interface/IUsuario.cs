@@ -15,6 +15,6 @@ namespace FinanzaPersonalAPI.DataAccess.Interface
 
         void EliminarUsuario(Usuario usuario);
 
-        IEnumerable<Usuario> ListarUsuario(string? usuario);
+        IEnumerable<Usuario> ListarUsuario();
     }
 }

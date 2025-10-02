@@ -37,11 +37,13 @@ namespace FinanzaPersonalAPI.DataAccess
             //iusuario.InsertarUsuario(usuario);
         }
 
-        public IEnumerable<Model.Usuario> ListarUsuario(string? usuario)
+        public IEnumerable<Model.Usuario> ListarUsuario()
         {
-            var listaUsuarios =  _context.Usuarios
-                                .FromSqlInterpolated($"usp_Usuario_Listar {usuario}")
-                                .ToList();
+            //var listaUsuarios =  _context.Usuarios
+            //                    .FromSqlInterpolated($"usp_Usuario_Listar {usuario}")
+            //                    .ToList();
+
+            var listaUsuarios= _context.Usuarios.ToList();
 
             return listaUsuarios;
         }
