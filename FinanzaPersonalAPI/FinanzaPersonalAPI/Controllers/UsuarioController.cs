@@ -1,5 +1,7 @@
 ﻿using FinanzaPersonalAPI.BusinessLogic.Interface;
+using FinanzaPersonalAPI.DataAccess;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
 namespace FinanzaPersonalAPI.Controllers
@@ -11,10 +13,12 @@ namespace FinanzaPersonalAPI.Controllers
     {
         IUsuario iusuario;
         IEnumerable<Model.Usuario> listaUsuarios = Enumerable.Empty<Model.Usuario>();
+        private readonly ConnectionManagerDbContext _context;
 
-        public UsuarioController(IUsuario _usuario)
+        public UsuarioController(IUsuario _usuario, ConnectionManagerDbContext context)
         {
             this.iusuario = _usuario;
+            this._context = context;
         }
 
         [HttpPost]
@@ -57,7 +61,15 @@ namespace FinanzaPersonalAPI.Controllers
 
                 //var datosModelo = JsonSerializer.Deserialize<Model.Usuario>(datosSerializados);
 
-                iusuario.ModificarUsuario(usuario);
+                var _usuario = _context.Usuarios.Find(usuario.Id);
+
+                if (_usuario != null)
+                {
+                    _usuario.Nombre= usuario.Nombre;
+                    _usuario.Correo= usuario.Correo;
+                }
+
+                iusuario.ModificarUsuario(_usuario);
 
                 return Ok(new
                 {
@@ -87,7 +99,9 @@ namespace FinanzaPersonalAPI.Controllers
 
                 //var datosModelo = JsonSerializer.Deserialize<Model.Usuario>(datosSerializados);
 
-                iusuario.EliminarUsuario(usuario);
+                var _usuario = _context.Usuarios.Find(usuario.Id);
+
+                iusuario.EliminarUsuario(_usuario);
 
                 return Ok(new
                 {
